@@ -1,5 +1,4 @@
 syntax on
-filetype off
 
 set mouse=a
 map <ScrollWheelUp> <C-Y>
@@ -13,6 +12,7 @@ set smarttab
 
 " always uses spaces instead of tab characters
 set expandtab
+
 " size of a hard tabstop
 set tabstop=2
 
@@ -22,8 +22,16 @@ set shiftwidth=2
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
-" let Vundle manage Vundle
+" save swap and backup files in one place
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+
+" disable auto commenting on new lines
+set formatoptions-=cro
+
+" START VUNDLE
 " required!
+filetype off
 Bundle 'gmarik/vundle'
 
 " My Bundles Here
@@ -43,7 +51,8 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'Shougo/neocomplete'
 
 " required for Vundle
-filetype plugin indent on
+filetype on
+" END VUNDLE
 
 " use numbers to navigate document
 set number
@@ -76,17 +85,3 @@ let g:multi_cursor_exit_from_visual_mode=0
 :map <Leader>" gewi"<Esc>ea"<Esc>
 :map <Leader>' gewi'<Esc>ea'<Esc>
 :map <Leader>/ daW"=substitute(@@,"'\\\|\"","","g")<CR>P
-
-" NeoComplete options
-
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 1
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-let g:neocomplete#sources#dictionary#dictionaries = {
-    \ 'default' : '',
-    \ 'vimshell' : $HOME.'/.vimshell_hist',
-    \ 'scheme' : $HOME.'/.gosh_completions'
-        \ }
