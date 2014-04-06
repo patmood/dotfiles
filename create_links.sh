@@ -6,7 +6,8 @@
 # Variables
 dir=~/dotfiles
 olddir=~/dotfiles_old
-files=`ls | grep -v 'README\.md\|create_links\.sh\|.git'`
+files=`ls -a | grep -v 'README\.md\|create_links\.sh\|\(\.git\$\)\|\(\.$\)'`
+echo $files
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
