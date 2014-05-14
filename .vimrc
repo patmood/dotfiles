@@ -32,26 +32,31 @@ set formatoptions-=cro
 " START VUNDLE
 " required!
 filetype off
-Bundle 'gmarik/vundle'
+call vundle#begin()
 
-" My Bundles Here
-Bundle 'pangloss/vim-javascript'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-rails'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'helino/vim-json'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-haml'
-Bundle 'tpope/vim-cucumber'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" Usability Bundles
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'kien/ctrlp.vim'
-Bundle 'Shougo/neocomplete'
+" My Plugins Here
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'helino/vim-json'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
+Plugin 'tpope/vim-cucumber'
+
+" Usability Plugins
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Shougo/neocomplete'
+
+call vundle#end()
 
 " required for Vundle
-filetype on
+filetype plugin on
 " END VUNDLE
 
 " use numbers to navigate document
