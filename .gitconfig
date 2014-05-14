@@ -15,16 +15,16 @@
   remote  = green
 
 [color "diff"]
-  meta = yellow bold
-  frag = magenta bold
+  meta = yellow 
+  frag = magenta
 
-  old  = red bold
-  new  = green bold
+  old  = red
+  new  = green
 
 [color "status"]
 
   added     = green
-  changed   = yellow
+  changed   = red 
   untracked = cyan
 
 
@@ -48,3 +48,6 @@
 [user]
 	name = patmood
 	email = patrick.n.moody@gmail.com
+[git-pair]
+	authors = William Chan <will@verdigristech.com>
+	authors = Patrick Moody <patrick@verdigris.co>
