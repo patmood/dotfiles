@@ -23,3 +23,8 @@ Thumbs.db
 ####################
 node_modules
 *.pid
+
+# Misc
+###################
+*.config/fish/fish_history
+*.config/fish/fish_read_history
