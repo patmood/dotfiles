@@ -19,7 +19,7 @@ set tabstop=2
 " size of an "indent"
 set shiftwidth=2
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " save swap and backup files in one place
@@ -52,7 +52,6 @@ Plugin 'digitaltoad/vim-jade'
 " Usability Plugins
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Shougo/neocomplete'
 
 call vundle#end()
 
