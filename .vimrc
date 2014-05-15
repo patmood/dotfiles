@@ -47,6 +47,7 @@ Plugin 'helino/vim-json'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-cucumber'
+Plugin 'digitaltoad/vim-jade'
 
 " Usability Plugins
 Plugin 'terryma/vim-multiple-cursors'
