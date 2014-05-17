@@ -64,3 +64,4 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 echo -e " ,-_|\ \n/     \ \n\\_,-._/ \n     v"
+echo "Welcome to bash shell"

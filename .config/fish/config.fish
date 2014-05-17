@@ -1,4 +1,4 @@
-rvm use ruby-1.9.3
+rvm ruby-1.9.3
 setenv EDITOR vim
 
 function fish_greeting
