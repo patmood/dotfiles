@@ -7,6 +7,9 @@ map <ScrollWheelDown> <C-E>
 " set default clipboard to system
 set clipboard=unnamed
 
+" paste nicely from system clipboard on insert mode with cmd+v
+inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
+
 " make "tab" insert indents instead of tabs at the beginning of a line
 set smarttab
 
@@ -52,6 +55,7 @@ Plugin 'digitaltoad/vim-jade'
 " Usability Plugins
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
@@ -79,12 +83,15 @@ map <C-l> <C-w>l
 " Autocomplete html tags
 imap ,/ </<C-X><C-O>
 
+" Copy command
+vmap <C-c> "*ygv
+
 " fix the lag on some keybinding ie O
 :set timeout timeoutlen=3000 ttimeoutlen=100
 
 " Multiple cursors
-let g:multi_cursor_exit_from_insert_mode=0
-let g:multi_cursor_exit_from_visual_mode=0
+" let g:multi_cursor_exit_from_insert_mode=0
+" let g:multi_cursor_exit_from_visual_mode=0
 
 " Quoter
 :map <Leader>" gewi"<Esc>ea"<Esc>
