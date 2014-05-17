@@ -4,6 +4,21 @@ set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
+" Remove trailing whitespace on save
+function! Preserve(command)
+    " Save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    execute a:command
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+" Execute clear whitespace on save
+autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+
 " set default clipboard to system
 set clipboard=unnamed
 
@@ -60,7 +75,7 @@ Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 
 " required for Vundle
-filetype plugin on
+filetype plugin indent on
 " END VUNDLE
 
 " use numbers to navigate document
