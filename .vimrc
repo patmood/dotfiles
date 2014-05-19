@@ -23,7 +23,8 @@ autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 set clipboard=unnamed
 
 " paste nicely from system clipboard on insert mode with cmd+v
-inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
+" inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
+imap <D-v> ^O"*p
 
 " make "tab" insert indents instead of tabs at the beginning of a line
 set smarttab
