@@ -23,7 +23,7 @@ autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 set clipboard=unnamed
 
 " paste nicely from system clipboard on insert mode with cmd+v
-inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
+inoremap <D-v> <Esc>:set paste<CR>"*p:set nopaste<CR>a
 
 " make "tab" insert indents instead of tabs at the beginning of a line
 set smarttab
@@ -118,4 +118,15 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+" Copy/paste to system clipboard with Space + C/Space + P
+vmap <Space>y "+y
+vmap <Space>d "+d
+nmap <Space>p "+p
+nmap <Space>P "+P
+vmap <Space>p "+p
+vmap <Space>P "+P
+
+" Go to start of line and visual mode (good for block commenting)
+nmap <Space>/ 0<C-v>
 
