@@ -4,8 +4,26 @@ set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
+" Remove trailing whitespace on save
+function! Preserve(command)
+    " Save last search, and cursor position.
+    let _s=@/
+    let l = line(".")
+    let c = col(".")
+    " Do the business:
+    execute a:command
+    " Clean up: restore previous search history, and cursor position
+    let @/=_s
+    call cursor(l, c)
+endfunction
+" Execute clear whitespace on save
+autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+
 " set default clipboard to system
 set clipboard=unnamed
+
+" paste nicely from system clipboard on insert mode with cmd+v
+inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
 
 " make "tab" insert indents instead of tabs at the beginning of a line
 set smarttab
@@ -52,11 +70,12 @@ Plugin 'digitaltoad/vim-jade'
 " Usability Plugins
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 
 " required for Vundle
-filetype plugin on
+filetype plugin indent on
 " END VUNDLE
 
 " use numbers to navigate document
@@ -79,14 +98,21 @@ map <C-l> <C-w>l
 " Autocomplete html tags
 imap ,/ </<C-X><C-O>
 
+" Copy command
+vmap <C-c> "*ygv
+
 " fix the lag on some keybinding ie O
 :set timeout timeoutlen=3000 ttimeoutlen=100
 
 " Multiple cursors
-let g:multi_cursor_exit_from_insert_mode=0
-let g:multi_cursor_exit_from_visual_mode=0
+" let g:multi_cursor_exit_from_insert_mode=0
+" let g:multi_cursor_exit_from_visual_mode=0
 
 " Quoter
 :map <Leader>" gewi"<Esc>ea"<Esc>
 :map <Leader>' gewi'<Esc>ea'<Esc>
 :map <Leader>/ daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
+" Supercharge Ctrl-P plugin
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
