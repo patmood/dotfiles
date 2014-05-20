@@ -5,6 +5,7 @@ function fish_greeting
   echo -e " ,-_|\ \n/     \ \n\\_,-._/ \n     v"
 end
 
+alias dev="cd ~/Dev/"
 alias bai="cd /Users/patrickmoody/verdigris/building.ai"
 alias gs="git status"
 alias gc="git commit -v"

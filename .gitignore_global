@@ -28,3 +28,5 @@ node_modules
 ###################
 *.config/fish/fish_history
 *.config/fish/fish_read_history
+my.notes
+*fishd.*
