@@ -23,8 +23,7 @@ autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 set clipboard=unnamed
 
 " paste nicely from system clipboard on insert mode with cmd+v
-" inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
-imap <D-v> ^O"*p
+inoremap <D-v> ^O:set paste<CR>^R*^O:set nopaste<CR>
 
 " make "tab" insert indents instead of tabs at the beginning of a line
 set smarttab
@@ -113,3 +112,7 @@ vmap <C-c> "*ygv
 :map <Leader>" gewi"<Esc>ea"<Esc>
 :map <Leader>' gewi'<Esc>ea'<Esc>
 :map <Leader>/ daW"=substitute(@@,"'\\\|\"","","g")<CR>P
+
+" Supercharge Ctrl-P plugin
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+let g:ctrlp_use_caching = 0
