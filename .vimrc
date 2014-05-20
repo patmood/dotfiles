@@ -113,6 +113,9 @@ vmap <C-c> "*ygv
 :map <Leader>' gewi'<Esc>ea'<Esc>
 :map <Leader>/ daW"=substitute(@@,"'\\\|\"","","g")<CR>P
 
-" Supercharge Ctrl-P plugin
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-let g:ctrlp_use_caching = 0
+" Ignore some folders and files for CtrlP indexing
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ }
+
