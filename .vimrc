@@ -25,7 +25,7 @@ set clipboard=unnamed
 " paste nicely from system clipboard on insert mode with cmd+v
 inoremap <D-v> <Esc>:set paste<CR>"*p:set nopaste<CR>a
 
-" make "tab" insert indents instead of tabs at the beginning of a line
+" make \"tab\" insert indents instead of tabs at the beginning of a line
 set smarttab
 
 " always uses spaces instead of tab characters
@@ -90,10 +90,10 @@ set bs=2
 nmap <CR> G
 
 " Navigating panes
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-f> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
 
 " Autocomplete html tags
 imap ,/ </<C-X><C-O>
@@ -130,3 +130,5 @@ vmap <Space>P "+P
 " Go to start of line and visual mode (good for block commenting)
 nmap <Space>/ 0<C-v>
 
+" Resource vimrc
+cmap src source ~/.vimrc
