@@ -18,3 +18,6 @@ alias dev="cd ~/Dev/"
 
 # Pass this a directory and it will search within each file
 alias rar="grep -H -r --exclude-dir={log,.git,tmp,node_modules}"
+
+# Run function to load local variables
+local

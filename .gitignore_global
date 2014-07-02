@@ -31,3 +31,4 @@ bower_components
 *.config/fish/fish_read_history
 my.notes
 *fishd.*
+*local.fish
