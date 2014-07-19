@@ -24,3 +24,7 @@ To install plugins, open vim and run `:PluginInstall`
 To set fish as the default shell get the path to fish with `which fish` then run `sudo chsh -s /usr/local/bin/fish patrickmoody`
 
 Link `~/.config/fish/config.fish` to `config.fish` in this repo
+
+## Other Useful setup stuff
+
+Add a git pre-commit hook to prevent bad commits: https://gist.github.com/patmood/9609325
