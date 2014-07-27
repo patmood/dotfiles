@@ -1,6 +1,9 @@
 # Motherland
 function fish_greeting
   echo -e " ,-_|\ \n/     \ \n\\_,-._/ \n     v"
+
+  # Show todo list
+  python ~/dodis/dodis.py
 end
 
 # Set the prompt
@@ -54,9 +57,11 @@ alias gc="git commit -v"
 alias gd="git diff"
 alias ga="git add"
 alias dev="cd ~/Dev/"
+alias do="python ~/dodis/dodis.py"
 
 # Pass this a directory and it will search within each file
 alias rar="grep -H -r --exclude-dir={log,.git,tmp,node_modules}"
 
 # Run function to load local variables
 local
+
