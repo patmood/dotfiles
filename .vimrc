@@ -116,7 +116,7 @@ vmap <C-c> "*ygv
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$\|\.map$'
   \ }
 
 " Copy/paste to system clipboard with Space + C/Space + P
