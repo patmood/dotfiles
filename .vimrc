@@ -28,6 +28,9 @@ inoremap <D-v> <Esc>:set paste<CR>"*p:set nopaste<CR>a
 " make \"tab\" insert indents instead of tabs at the beginning of a line
 set smarttab
 
+" keep cursor off the edges
+set scrolloff=4
+
 " always uses spaces instead of tab characters
 set expandtab
 
