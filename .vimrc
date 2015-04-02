@@ -1,5 +1,7 @@
 syntax on
 
+colorscheme Tomorrow-Night-Eighties
+
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>

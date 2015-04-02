@@ -44,12 +44,15 @@ function fish_prompt
   set_color normal
 end
 
-rvm ruby-1.9.3
 setenv EDITOR vim
 
 set PATH /usr/local/sbin $PATH
 set PATH /usr/local/bin $PATH
 
+rvm ruby-1.9.3
+
+# Aliases
+alias tmux="env TERM=screen-256color-bce tmux"
 alias dev="cd ~/Dev/"
 alias bai="cd /Users/patrickmoody/verdigris/building.ai"
 alias gs="git status"
