@@ -49,7 +49,7 @@ setenv EDITOR vim
 set PATH /usr/local/sbin $PATH
 set PATH /usr/local/bin $PATH
 
-rvm ruby-1.9.3
+rvm ruby-2.0
 
 # Aliases
 alias tmux="env TERM=screen-256color-bce tmux"
