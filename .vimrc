@@ -1,5 +1,7 @@
 syntax on
 
+colorscheme codeschool
+
 set mouse=a
 map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
@@ -135,3 +137,4 @@ nmap <Space>/ 0<C-v>
 
 " Resource vimrc
 cmap src source ~/.vimrc
+

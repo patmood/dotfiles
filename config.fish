@@ -44,11 +44,17 @@ function fish_prompt
   set_color normal
 end
 
-rvm ruby-1.9.3
-setenv EDITOR vim
+# rvm shit for work
+# rvm ruby-1.9.3
+# setenv EDITOR vim
 
 set PATH /usr/local/sbin $PATH
 set PATH /usr/local/bin $PATH
+set PATH /Applications/Postgres.app/Contents/Versions/9.4/bin $PATH
+
+# rbenv shit for personal
+set -gx RBENV_ROOT /usr/local/var/rbenv
+. (rbenv init -|psub)
 
 alias dev="cd ~/Dev/"
 alias bai="cd /Users/patrickmoody/verdigris/building.ai"
