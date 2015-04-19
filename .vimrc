@@ -42,9 +42,6 @@ set tabstop=2
 " size of an "indent"
 set shiftwidth=2
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#rc()
-
 " save swap and backup files in one place
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
@@ -54,6 +51,9 @@ set formatoptions-=cro
 
 " START VUNDLE
 " required!
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#rc()
+
 filetype off
 call vundle#begin()
 
