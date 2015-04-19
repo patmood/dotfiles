@@ -1,6 +1,6 @@
 syntax on
 
-colorscheme codeschool
+colorscheme Tomorrow-Night-Eighties
 
 set mouse=a
 map <ScrollWheelUp> <C-Y>
@@ -75,7 +75,7 @@ Plugin 'digitaltoad/vim-jade'
 " Usability Plugins
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'kien/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'Lokaltog/vim-easymotion'
 
 call vundle#end()
 
@@ -93,6 +93,10 @@ set expandtab
 set bs=2
 
 nmap <CR> G
+
+" 80 Character ruler
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
 
 " Navigating panes
 nnoremap <C-j> <C-w>j
@@ -121,7 +125,7 @@ vmap <C-c> "*ygv
 " Ignore some folders and files for CtrlP indexing
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$\|\.map$'
+  \ 'file': '\.so$\|\.dat$|\.DS_Store$\|\.map$\|source_maps'
   \ }
 
 " Copy/paste to system clipboard with Space + C/Space + P

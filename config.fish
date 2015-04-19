@@ -44,9 +44,7 @@ function fish_prompt
   set_color normal
 end
 
-# rvm shit for work
-# rvm ruby-1.9.3
-# setenv EDITOR vim
+setenv EDITOR vim
 
 set PATH /usr/local/sbin $PATH
 set PATH /usr/local/bin $PATH
@@ -56,8 +54,11 @@ set PATH /Applications/Postgres.app/Contents/Versions/9.4/bin $PATH
 set -gx RBENV_ROOT /usr/local/var/rbenv
 . (rbenv init -|psub)
 
+rvm ruby-2.0
+
+# Aliases
+alias tmux="env TERM=screen-256color-bce tmux"
 alias dev="cd ~/Dev/"
-alias bai="cd /Users/patrickmoody/verdigris/building.ai"
 alias gs="git status"
 alias gc="git commit -v"
 alias gd="git diff"
