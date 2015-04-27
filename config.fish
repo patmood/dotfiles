@@ -59,12 +59,13 @@ rvm ruby-2.0
 # Aliases
 alias tmux="env TERM=screen-256color-bce tmux"
 alias dev="cd ~/Dev/"
+alias do="python ~/dodis/dodis.py"
+alias rm="trash"
+
 alias gs="git status"
 alias gc="git commit -v"
 alias gd="git diff"
 alias ga="git add"
-alias dev="cd ~/Dev/"
-alias do="python ~/dodis/dodis.py"
 
 # Pass this a directory and it will search within each file
 alias rar="grep -H -r --exclude-dir={log,.git,tmp,node_modules}"
