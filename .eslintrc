@@ -3,6 +3,10 @@
  "rules":
    {
      "comma-dangle": [2, "always-multiline"],
-     "no-unused-vars": [2, {"vars": "all", "varsIgnorePattern": "^_"}]
+     "no-unused-vars": [2, {
+        "varsIgnorePattern": "^_",
+        "argsIgnorePattern": "^_",
+        "vars": "all"
+      }]
    }
 }
