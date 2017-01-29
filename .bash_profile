@@ -18,10 +18,10 @@ function git_branch {
 
   if [[ $git_status =~ $on_branch ]]; then
     local branch=${BASH_REMATCH[1]}
-    echo "($branch)"
+    echo " ($branch)"
   elif [[ $git_status =~ $on_commit ]]; then
     local commit=${BASH_REMATCH[1]}
-    echo "($commit)"
+    echo " ($commit)"
   fi
 }
 
@@ -90,7 +90,7 @@ txtrst='\[\033[m\]'   # Text Reset
 
 PS1="\[$COLOR_YELLOW\]\w>"          # basename of pwd
 PS1+="\[\$(git_color)\]"        # colors git status
-PS1+=" \$(git_branch)"           # prints current branch
+PS1+="\$(git_branch)"           # prints current branch
 PS1+="\[$BLUE\]\[$COLOR_RESET\] "   # '#' for root, else '$'
 export PS1
 
