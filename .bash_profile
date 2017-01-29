@@ -1,7 +1,5 @@
-#add git branch to terminal
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"
@@ -85,8 +83,6 @@ bakpur='\[\033[45m\]'   # Purple
 bakcyn='\[\033[46m\]'   # Cyan
 bakwht='\[\033[47m\]'   # White
 txtrst='\[\033[m\]'   # Text Reset
-
-# export PS1="$txtylw\w>$txtgrn\$(parse_git_branch)$txtrst "
 
 PS1="\[$COLOR_YELLOW\]\w>"          # basename of pwd
 PS1+="\[\$(git_color)\]"        # colors git status
