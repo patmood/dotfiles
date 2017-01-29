@@ -15,7 +15,7 @@
   remote  = green
 
 [color "diff"]
-  meta = yellow 
+  meta = yellow
   frag = magenta
 
   old  = red
@@ -24,7 +24,7 @@
 [color "status"]
 
   added     = green
-  changed   = yellow 
+  changed   = yellow
   untracked = cyan
 
 
@@ -38,7 +38,7 @@
 
 [alias]
   st   = status -sb
-  lg   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative  
+  lg   = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --graph --abbrev-commit --date=relative
 
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 
@@ -48,6 +48,3 @@
 [user]
 	name = patmood
 	email = patrick.n.moody@gmail.com
-[git-pair]
-	authors = William Chan <will@verdigristech.com>
-	authors = Patrick Moody <patrick@verdigris.co>
