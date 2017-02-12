@@ -1,6 +1,6 @@
 syntax on
 
-colorscheme Tomorrow-Night-Eighties
+" colorscheme Tomorrow-Night-Eighties
 
 set mouse=a
 map <ScrollWheelUp> <C-Y>
@@ -141,4 +141,3 @@ nmap <Space>/ 0<C-v>
 
 " Resource vimrc
 cmap src source ~/.vimrc
-

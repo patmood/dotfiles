@@ -95,7 +95,7 @@ alias dev='cd ~/Dev/'
 alias gs='git status'
 alias gd='git diff'
 alias ga='git add'
-alias gc='git commit'
+alias gc='git commit -v'
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
